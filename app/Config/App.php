@@ -24,9 +24,9 @@ class App extends BaseConfig
      *
      * @var string
      */
-    // public $baseURL = 'http://localhost:8080/';
+    public $baseURL = 'http://localhost:8080/';
     //    public $baseURL = 'http://localhost/codeigniter4/';
-    public $baseURL = 'https://developtestz.herokuapp.com/';
+    // public $baseURL = 'https://developtestz.herokuapp.com/';
     /**
      * --------------------------------------------------------------------------
      * Index File
@@ -38,7 +38,7 @@ class App extends BaseConfig
      *
      * @var string
      */
-    // public $indexPage = 'index.php';
+    public $indexPage = 'index.php';
 
     /**
      * --------------------------------------------------------------------------
