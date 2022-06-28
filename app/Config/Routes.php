@@ -42,7 +42,36 @@ $routes->get('/logout', 'loginController::logout');
 $routes->get('/logout_message', 'loginController::logout_message');
 
 $routes->get('/dashboard', 'AdminController::index', ['filter' => 'authGuard']);
+$routes->get('/deleteProduct/(:any)', 'AdminController::deleteProduct/$1');
+$routes->get('/deleteUser/(:any)', 'AdminController::deleteUser/$1');
+$routes->get('/deleteCustomer/(:any)', 'AdminController::deleteCustomer/$1');
+$routes->get('/deleteCategoryProduct/(:any)', 'AdminController::deleteCategoryProduct/$1');
 
+$routes->get('/dashboard/index', 'AdminController::Cartindex');
+$routes->post('/dashboard/update', 'AdminController::update');
+$routes->get('/dashboard/buy/(:any)', 'AdminController::buy/$1');
+$routes->get('/dashboard/remove/(:any)', 'AdminController::remove/$1');
+
+
+
+
+$routes->post('/insertUser', 'AdminController::InsertUser');
+$routes->post('/insertCustomer', 'AdminController::InsertCustomer');
+$routes->post('/insertProduct', 'AdminController::InsertProduct');
+$routes->post('/insertCategoryProduct', 'AdminController::InsertCategoryProduct');
+
+$routes->get('/editUser/(:num)', 'AdminController::editUser/$1');
+$routes->get('/editCustomer/(:num)', 'AdminController::editCustomer/$1');
+$routes->get('/editProduct/(:num)', 'AdminController::editProduct/$1');
+$routes->get('/editCategoryProduct/(:num)', 'AdminController::editCategoryProduct/$1');
+$routes->get('/searchDataCustomer', 'AdminController::searchDataCustomer');
+$routes->get('/order/(:num)/(:any)', 'AdminController::order/$1/$2');
+
+
+$routes->post('/updateUser/(:any)', 'AdminController::updateUser/$1');
+$routes->post('/updateCustomer/(:any)', 'AdminController::updateCustomer/$1');
+$routes->post('/updateProduct/(:any)', 'AdminController::updateProduct/$1');
+$routes->post('/updateCategoryProduct/(:any)', 'AdminController::updateCategoryProduct/$1');
 /*
  * --------------------------------------------------------------------
  * Additional Routing
