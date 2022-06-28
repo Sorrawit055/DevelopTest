@@ -38,6 +38,9 @@ $routes->set404Override();
 $routes->get('/', 'LoginController::index');
 $routes->get('/signin', 'loginController::index');
 $routes->post('/loginAuth', 'loginController::loginAuth');
+$routes->get('/logout', 'loginController::logout');
+$routes->get('/logout_message', 'loginController::logout_message');
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing
