@@ -41,6 +41,8 @@ $routes->post('/loginAuth', 'loginController::loginAuth');
 $routes->get('/logout', 'loginController::logout');
 $routes->get('/logout_message', 'loginController::logout_message');
 
+$routes->get('/dashboard', 'AdminController::index', ['filter' => 'authGuard']);
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing
