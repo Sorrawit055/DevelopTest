@@ -22,9 +22,9 @@
             <div class="container-fluid">
                 <?php $session = session(); ?>
                 <?php if (isset($_SESSION['status']) && $_SESSION["status"] == "Active") { ?>
-                    <a class="navbar-brand" href="<?php echo base_url(); ?>/dashboard">HOME</a>
+                    <a class="navbar-brand" href="<?php echo base_url(); ?>/LoginController/dashboard">HOME</a>
                 <?php } else { ?>
-                    <a class="navbar-brand" href="<?php echo base_url(); ?>/signin">HOME</a>
+                    <a class="navbar-brand" href="<?php echo base_url(); ?>/LoginController/signin">HOME</a>
                 <?php } ?>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -38,12 +38,12 @@
 
                             <ul>
                                 <li> <a style="color:white;line-height:30px;"><?php echo $session->get('name'); ?> <?php echo $session->get('surname'); ?></a>
-                                    <a class="btn btn-primary" style="color:white;line-height:80%;" href="<?php echo base_url(); ?>/logout" style="color:black">ออกจากระบบ</a>
+                                    <a class="btn btn-primary" style="color:white;line-height:80%;" href="<?php echo base_url(); ?>/LoginController/logout" style="color:black">ออกจากระบบ</a>
                                 </li>
                             </ul>
 
                         <?php } else { ?>
-                            <a class="btn btn-primary" href="<?php echo base_url(); ?>/signin" style="color:black">เข้าสู่ระบบ</a> </li>
+                            <a class="btn btn-primary" href="<?php echo base_url(); ?>/LoginController/signin" style="color:black">เข้าสู่ระบบ</a> </li>
                         <?php } ?>
                     </form>
 
