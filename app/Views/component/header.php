@@ -24,7 +24,7 @@
                 <?php if (isset($_SESSION['status']) && $_SESSION["status"] == "Active") { ?>
                     <a class="navbar-brand" href="<?php echo base_url(); ?>/LoginController/dashboard">HOME</a>
                 <?php } else { ?>
-                    <a class="navbar-brand" href="<?php echo base_url(); ?>/LoginController/signin">HOME</a>
+                    <a class="navbar-brand" href="<?php echo base_url(); ?>/LoginController/index">HOME</a>
                 <?php } ?>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -43,7 +43,7 @@
                             </ul>
 
                         <?php } else { ?>
-                            <a class="btn btn-primary" href="<?php echo base_url(); ?>/LoginController/signin" style="color:black">เข้าสู่ระบบ</a> </li>
+                            <a class="btn btn-primary" href="<?php echo base_url(); ?>/LoginController/index" style="color:black">เข้าสู่ระบบ</a> </li>
                         <?php } ?>
                     </form>
 
