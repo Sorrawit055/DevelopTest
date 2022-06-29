@@ -37,10 +37,10 @@ $routes->setAutoRoute(true);
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'LoginController::index');
-$routes->get('/signin', 'loginController::index');
-$routes->post('/loginAuth', 'loginController::loginAuth');
-$routes->get('/logout', 'loginController::logout');
-$routes->get('/logout_message', 'loginController::logout_message');
+$routes->get('/LoginController/signin', 'loginController::index');
+$routes->post('/LoginController/loginAuth', 'loginController::loginAuth');
+$routes->get('/LoginController/logout', 'loginController::logout');
+$routes->get('/LoginController/logout_message', 'loginController::logout_message');
 
 $routes->get('/dashboard', 'AdminController::index', ['filter' => 'authGuard']);
 $routes->get('/deleteProduct/(:any)', 'AdminController::deleteProduct/$1');

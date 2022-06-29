@@ -43,15 +43,15 @@ class LoginController extends BaseController
                     return redirect()->to('/dashboard');
                 }else{
                     $session->setFlashdata('fail', 'Username ปิดใช้งาน');
-                    return redirect()->to('/signin');
+                    return redirect()->to('/LoginController/signin');
                 }
             } else {
                 $session->setFlashdata('fail', 'Passwordไม่ถูกต้อง.');
-                return redirect()->to('/signin');
+                return redirect()->to('/LoginController/signin');
             }
         } else {
             $session->setFlashdata('fail', 'Username ไม่ถูกต้อง.');
-            return redirect()->to('/signin');
+            return redirect()->to('/LoginController/signin');
         }
     }
 
@@ -61,14 +61,14 @@ class LoginController extends BaseController
         $session->destroy();
         if ($session->destroy = TRUE) {
             $session = session();
-            return redirect()->to('/logout_message');
+            return redirect()->to('/LoginController/logout_message');
         }
     }
     public function logout_message()
     {
         $session = session();
         $session->setFlashdata('success', 'ออกจากระบบ');
-        return redirect()->to('/signin');
+        return redirect()->to('/LoginController/signin');
 
     }
 
